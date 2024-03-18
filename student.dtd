@@ -1,0 +1,16 @@
+<!ELEMENT student (id, firstName, lastName, code, account?, subjects?)>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT firstName (#PCDATA)>
+<!ELEMENT lastName (#PCDATA)>
+<!ELEMENT code (#PCDATA)>
+<!ELEMENT account (id, username, password)>
+<!ELEMENT subjects (subject*)>
+<!ELEMENT subject (id, name, credits)>
+<!ELEMENT username (#PCDATA)>
+<!ELEMENT password (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT credits (#PCDATA)>
+<!ATTLIST id xmlns CDATA #IMPLIED>
+<!ATTLIST account xmlns CDATA #IMPLIED>
+<!ATTLIST subjects xmlns CDATA #IMPLIED>
+<!ATTLIST subject xmlns CDATA #IMPLIED>

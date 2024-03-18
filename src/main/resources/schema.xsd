@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://maven.apache.org/POM/4.0.0"
+           targetNamespace="http://maven.apache.org/POM/4.0.0"
+           elementFormDefault="qualified">
+
+    <!-- Define the elements and types for your XML structure -->
+    <xs:element name="project">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="modelVersion" type="xs:string"/>
+                <xs:element name="groupId" type="xs:string"/>
+                <xs:element name="artifactId" type="xs:string"/>
+                <xs:element name="version" type="xs:string"/>
+                <xs:element name="packaging" type="xs:string"/>
+                <xs:element name="properties" type="propertiesType"/>
+                <xs:element name="dependencies" type="dependenciesType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="propertiesType">
+        <xs:sequence>
+            <xs:element name="project.build.sourceEncoding" type="xs:string"/>
+            <xs:element name="maven.compiler.source" type="xs:string"/>
+            <xs:element name="maven.compiler.target" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="dependenciesType">
+        <xs:sequence>
+            <xs:element name="dependency" type="dependencyType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="dependencyType">
+        <xs:sequence>
+            <xs:element name="groupId" type="xs:string"/>
+            <xs:element name="artifactId" type="xs:string"/>
+            <xs:element name="version" type="xs:string"/>
+            <xs:element name="scope" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

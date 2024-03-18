@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE student SYSTEM "student.dtd">
+<student>
+    <id>1</id>
+    <firstName>John</firstName>
+    <lastName>Doe</lastName>
+    <code>JD001</code>
+    <account>
+        <id>0</id>
+        </username>
+    <password>password</password>
+        <username>johndoe</username>
+    </password>
+</account>
+    <subjects>
+        <subject>
+            <id>0</id>
+            <name>Math</name>
+            <credits>5</credits>
+        </subject>
+        <subject>
+            <id>0</id>
+            <name>Science</name>
+            <credits>4</credits>
+        </subject>
+    </subjects>
+</student>
